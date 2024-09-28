@@ -1,0 +1,31 @@
+body {
+    padding-top: 56px; /* Adjust for fixed navbar */
+}
+
+.section-bg {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    padding: 4rem 0;
+}
+
+#home {
+    background-image: url('path/to/home-background.jpg');
+}
+
+#details {
+    background-image: url('path/to/details-background.jpg');
+}
+
+#accommodation {
+    background-image: url('path/to/accommodation-background.jpg');
+}
+
+#menu {
+    background-image: url('path/to/menu-background.jpg');
+}
+
+/* Add more custom styles as needed */
