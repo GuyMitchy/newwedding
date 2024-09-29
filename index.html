@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -6,19 +6,21 @@
     <title>Guy & Bex Wedding</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Le+Jour:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Header with Navigation -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
-            <div class="container">
-                <a class="navbar-brand" href="#home">Guy & Bex</a>
+            <div class="container-fluid nav-container">
+                <a class="navbar-brand" href="#home"><img src="assets/images/white-logo.png" alt="Guy & Bex" class="logo"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="#home">Home</a>
+                            <a class="nav-link" href="#main">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#details">Details</a>
@@ -29,25 +31,36 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#menu">Menu</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#" data-toggle="modal" data-target="#rsvpModal">RSVP</a>
+                        </li>
                     </ul>
                 </div>
-                <button class="btn btn-primary" data-toggle="modal" data-target="#rsvpModal">RSVP</button>
             </div>
         </nav>
     </header>
 
-    <main>
+    <main id="main">
+        <!-- Home Section -->
         <section id="home" class="section-bg">
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
-                    <div class="col-12">
-                        <h1>Welcome to Our Wedding</h1>
-                        <p>Join us in celebrating our special day!</p>
+                    <div class="col-12 text-center text-shadow">
+                        <p class="invitation-text">PLEASE JOIN US FOR</p>
+                        <h1 class="wedding-of">The wedding of</h1>
+                        <h2 class="couple-names guy">GUY</h2>
+                        <span class="and">and<span class="couple-names bex">REBECCA</span></span>
+                        
+                        <p class="date">Thursday 27th February 2024</p>
+                        <p class="date deer-park">Deer Park Country House</p>
+                        <p class="ceremony-time">1.30PM Ceremony</p>
+                        <p class="reception">with reception to follow</p>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Details Section -->
         <section id="details" class="section-bg">
             <div class="container">
                 <div class="row">
@@ -63,6 +76,7 @@
             </div>
         </section>
 
+        <!-- Accommodation Section -->
         <section id="accommodation" class="section-bg">
             <div class="container">
                 <div class="row">
@@ -82,24 +96,53 @@
             </div>
         </section>
 
+        <!-- Menu Section -->
         <section id="menu" class="section-bg">
             <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <h2>Wedding Menu</h2>
-                        <p>Details about the food and beverages served at the reception.</p>
+                <div class="row justify-content-center">
+                    <div class="col-12 col-md-10 col-lg-8 text-center menu-text">
+                        <h2 class="menu-title mb-3">Menu</h2>
+                        
+                        <h3 class="menu-section mb-3 course-title">STARTER</h3>
+                        <p class="menu-item item-title">Ham Hock Terrine</p>
+                        <p class="menu-item item-description">Plum Chutney, Heritage Carrots, Date & Walnut Bread</p>
+                        <p class="menu-item item-title">Chilli & Coriander Crab Cakes</p>
+                        <p class="menu-item item-description">Lime Mayonnaise, Dressed Baby Leaves</p>
+                        <p class="menu-item item-title">Grilled Capricorn Goat's Cheese</p>
+                        <p class="menu-item item-description">Poached Pear, Pickled Celery & Pain d'Epice</p>
+                        
+                        <h3 class="menu-section mb-3 course-title">MAIN</h3>
+                        <p class="menu-item item-title">Roast Breast of Chicken</p>
+                        <p class="menu-item item-description">Gratin Potatoes, Celeriac Purée, Hazelnut & Truffle Pesto</p>
+                        <p class="menu-item item-title">Seared Fillet of Bass</p>
+                        <p class="menu-item item-description">Crushed Potatoes, Spinach & Baby Leeks, Beurre Noisette</p>
+                        <p class="menu-item item-title">Butternut Squash Ravioli</p>
+                        <p class="menu-item item-description">Pumpkin Purée, Tenderstem Brocolli, Sage Butter</p>
+                        
+                        <h3 class="menu-section mb-3 course-title">DESSERT</h3>
+                        <p class="menu-item item-title">Dark Chocolate Mousse</p>
+                        <p class="menu-item item-description">Pistachio Ice Cream, Griottine Cherries</p>
+                        <p class="menu-item item-title">Sticky Ginger Pudding</p>
+                        <p class="menu-item item-description">Devon Clotted Cream, Butterscotch Sauce</p>
+                        <p class="menu-item item-title">Caramelised Lemon Tart</p>
+                        <p class="menu-item item-description">Raspberry Sorbet</p>
+                        
+                        <div class="rsvp-note mt-4">
+                            <img src="assets/images/circle-deer.svg" alt="Deer Icon" class="deer-icon mb-3">
+                            <p class="rsvp-text">RSVP with your choice or let us know of any dietary requirements by 30th November.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="bg-light py-4">
         <div class="container">
             <div class="row">
-                <div class="col-12 text-center">
-                    <p>&copy; 2023 Guy & Bex Wedding</p>
-                    <p>Wedding Date: [Your Wedding Date]</p>
+                <div class="col-12 col-md-4 text-center">
+                    <p>27 . 02 . 25</p>
                     <ul class="list-inline">
                         <li class="list-inline-item"><a href="#" class="text-muted">Privacy Policy</a></li>
                         <li class="list-inline-item"><a href="#" class="text-muted">Terms of Use</a></li>
@@ -127,6 +170,7 @@
         </div>
     </div>
 
+    <!-- JavaScript Dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>

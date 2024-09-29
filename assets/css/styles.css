@@ -1,6 +1,60 @@
-body {
-    padding-top: 56px; /* Adjust for fixed navbar */
+@font-face {
+    font-family: 'Le Jour Script';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Le Jour Script'), url('../fonts/LeJourScript-Eaqpg.woff') format('woff');
 }
+
+@font-face {
+    font-family: 'Le Jour Serif';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Le Jour Serif'), url('../fonts/LeJourSerif-OVZMo.woff') format('woff');
+}
+
+
+
+
+body {
+    padding-top: 56px;
+    /* Adjust for fixed navbar */
+}
+
+/* NAVBAR */
+
+.bg-light {
+    background-color: #ffe6e9 !important;
+}
+
+.logo {
+
+    height: 55px;
+    
+ }
+    
+
+.nav-link {
+    font-family: 'Bellefair', serif !important;
+    font-size: 1rem;
+    letter-spacing: 2px;
+}
+.nav-item {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.navbar-brand {
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-right: 0;
+}
+
+.navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+.navbar { box-shadow: 0 4px 8px 0 rgba(52, 52, 52, 0.2); }
+
 
 .section-bg {
     background-size: cover;
@@ -9,23 +63,264 @@ body {
     height: 100vh;
     display: flex;
     align-items: center;
-    padding: 4rem 0;
+    
 }
+
+
 
 #home {
     background-image: url('../images/flowerbackground.png');
+    background-attachment: fixed;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+    
+    
 }
 
+/* HOME SECTION */
+
+.text-shadow {
+    text-shadow: 1px 1px 1px rgba(55, 55, 55, 0.508);
+}
+
+/* INVITE CONTENT */
+
+
+/* PLEASE JOIN US */
+.invitation-text {
+    font-family: 'Bellefair', serif;
+    font-size: 1.8rem;
+    letter-spacing: 4px;
+    margin-bottom: 1rem;
+    position: relative;
+    bottom: 40px;
+    
+   
+}
+
+/* WEDDING OF */
+
+.wedding-of {
+    font-family: 'Le Jour Script', sans-serif;
+    font-size: 2rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+    margin-top: 2rem;
+    position: relative;
+   
+    bottom: 40px;
+}
+
+/* COUPLE NAMES */
+.couple-names {
+    font-family: 'Bellefair', serif;
+    font-size: 3rem;
+    font-style: normal;
+    margin-bottom: 0.5rem;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+}
+
+/* GUY */
+.guy {
+    position: relative;
+    right: 160px;
+    width: auto;
+}
+
+/* AND */
+.and {
+    font-family: 'Le Jour Script', sans-serif;
+    font-size: 2rem;
+    font-style: italic;
+    
+    position: relative;
+    bottom: 20px;
+    right: 5px;
+}
+
+/* BEX */
+.bex {
+    position: relative;
+    left: 40px;
+    top: 5px;
+    color: #ffffff;
+    
+}
+
+/* DATE */
+.date,
+.ceremony-time {
+    font-family: 'Bellefair', serif;
+    font-size: 1.6rem;
+    letter-spacing: 4px;
+    margin-bottom: 0;
+    margin-top: 0.5rem;
+    text-transform: uppercase;
+    
+}
+
+.date {
+    margin-top: 2rem;
+    
+}   
+
+
+.deer-park {
+    color: #ffffff;
+    margin-top: 0;
+    font-size: 1rem;
+}
+
+
+/* RECEPTION */
+.reception {
+    font-family: 'Le Jour Script', sans-serif;
+    font-size: 1.6rem;
+    font-style: italic;
+   
+}
+
+/* DETAILS SECTION */
 #details {
     background-image: url('../images/background2.png');
+    background-attachment: fixed;
 }
-
-#accommodation {
+/* ACCOMMODATION SECTION */
+#accommodation {    
     background-image: url('../images/background1.png');
+    background-attachment: fixed;
 }
 
+
+
+/* MENU SECTION */
 #menu {
     background-image: url('../images/background2.png');
+    background-attachment: fixed;
+    height: auto;
 }
 
+/* MENU TEXT */
+
+.menu-title {
+    font-family: 'Le Jour Script', serif;
+    font-size: 2rem;
+    margin-top: 4rem; 
+}
+
+.menu-text {
+    
+    font-family: 'Bellefair', serif;
+    letter-spacing: 2px;
+}
+
+.item-title {
+    margin-bottom: 0px;
+    font-size: 1rem;
+}
+
+.item-description {
+ font-size: 0.8rem;
+ color: #000000c6;
+}
+
+.course-title {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    margin-bottom: 0.2rem;
+}
+.menu-bottom {
+    margin-bottom: 0rem !important;
+}
+.deer-icon {
+    height: 50px;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.rsvp-text {
+    font-size: 0.8rem;
+}
+
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .wedding-of {
+        font-size: 2.5rem;
+    }
+
+    .couple-names {
+        font-size: 3rem;
+    }
+
+    .and {
+        font-size: 1.5rem;
+    }
+
+    .date,
+    .ceremony-time {
+        font-size: 1rem;
+    }
+
+    .reception {
+        font-size: 1.2rem;
+    }
+}
+
+
+
 /* Add more custom styles as needed */
+
+/* Enhanced Responsive adjustments */
+
+
+@media (max-width: 768px) {
+    #home .container {
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+    }
+
+    .invitation-text {
+        font-size: calc(1.4rem + 0.5vw);
+        margin-bottom: 1.5rem;
+    }
+    .wedding-of {
+        font-size: calc(1.4rem + 1vw);
+        margin-bottom: 2rem;
+    }
+    .couple-names {
+        font-size: calc(1.8rem + 1.5vw);
+        margin-bottom: 1.5rem;
+    }
+    .and {
+        font-size: calc(1.2rem + 1vw);
+        margin: 1.5rem 0;
+    }
+    .date, .ceremony-time {
+        font-size: calc(0.8rem + 0.3vw);
+        margin-bottom: 1rem;
+    }
+    .reception {
+        font-size: calc(1rem + 0.5vw);
+        margin-top: 1.5rem;
+    }
+
+    /* Adjust positioning for smaller screens */
+    .invitation-text, .wedding-of {
+        position: static;
+        margin-bottom: 1.5rem;
+    }
+    .guy, .bex {
+        position: static;
+    }
+    .and {
+        position: static;
+        margin: 1.5rem 0;
+    }
+}
