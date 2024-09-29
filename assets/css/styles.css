@@ -61,12 +61,7 @@ body {
 
 
 .section-bg {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100vh;
-    display: flex;
-    align-items: center;
+    
 
 }
 
@@ -81,6 +76,12 @@ body {
 
     text-align: center;
     height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
 
 
 
