@@ -53,10 +53,36 @@ body {
 .navbar {
     padding-top: 0;
     padding-bottom: 0;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    box-shadow: 0 4px 8px 0 rgba(52, 52, 52, 0.2);
 }
 
-.navbar {
-    box-shadow: 0 4px 8px 0 rgba(52, 52, 52, 0.2);
+#confettiButton {
+    
+    padding-right: 0.5rem !important;
+}
+
+/* Style the burger icon button */
+.navbar-toggler {
+    border: none; /* Remove the border */
+     /* Adjust padding as needed */
+}
+
+/* Style the burger icon itself */
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Change color on hover */
+.navbar-toggler:hover .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.7)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Remove the focus outline */
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
 }
 
 
@@ -197,7 +223,7 @@ body {
 /* RECEPTION */
 .reception {
     font-family: 'Le Jour Script', sans-serif;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
     font-size: 1.2rem;
 
 
@@ -208,7 +234,7 @@ body {
     background-image: url('../images/background2.png');
     background-attachment: fixed;
     height: auto;
-    padding-bottom: 2rem;
+   
 
 }
 
@@ -237,25 +263,29 @@ body {
     padding-left: 1rem;
     padding-right: 1rem;
     color: #000000c6;
-
-
 }
 
+.extras {
+    margin-bottom: 2rem;
+    
+
+}
 
 /* ACCOMMODATION SECTION */
 #accommodation {
     background-image: url('../images/background1.png');
     background-attachment: fixed;
     height: auto;
+    
 }
 
 .section-title {
     font-family: 'Le Jour Script', sans-serif;
     font-size: 1.8rem;
-    margin-top: 3rem;
     margin-bottom: 1rem;
     text-align: center;
-    color: #ffffff;
+    margin-top: 2rem;
+  
 }
 
 .room-type {
@@ -360,9 +390,21 @@ body {
     font-family: 'Bellefair', serif;
     font-size: 0.8rem;
     letter-spacing: 2px;
+    margin-top: 2px
 
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
+
+}
+
+.footer-text {
+    font-family: 'Bellefair', serif;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    
+
+
+ 
 }
 
 
@@ -403,3 +445,4 @@ body {
         display: none;
     }
 }
+
