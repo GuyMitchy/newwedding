@@ -1,33 +1,38 @@
 <!DOCTYPE HTML>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guy & Bex Wedding</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Le+Jour:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Le+Jour:wght@400;700&display=swap"
+        rel="stylesheet">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
     <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
     <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        function randomInRange(min, max) {
-            return Math.random() * (max - min) + min;
-        }
+        document.addEventListener('DOMContentLoaded', function () {
+            function randomInRange(min, max) {
+                return Math.random() * (max - min) + min;
+            }
 
 
-        document.getElementById('confettiButton').addEventListener('click', triggerConfetti);
-    });
+            document.getElementById('confettiButton').addEventListener('click', triggerConfetti);
+        });
     </script>
 </head>
+
 <body>
     <!-- Header with Navigation -->
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
             <div class="container-fluid nav-container">
-                <a class="navbar-brand" href="#home"><img src="assets/images/black-logo.png" alt="Guy & Bex" class="logo"></a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" href="#home"><img src="assets/images/black-logo.png" alt="Guy & Bex"
+                        class="logo"></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
@@ -48,11 +53,10 @@
                             <a class="nav-link" href="#" data-toggle="modal" data-target="#rsvpModal">RSVP</a>
                         </li>
                     </ul>
+                    
                 </div>
                 <!-- Add the confetti button here -->
-                <button id="confettiButton" class="btn btn-link d-lg-none" aria-label="Celebrate">
-                    <i class="fi fi-tr-party-horn"></i>
-                </button>
+                
             </div>
         </nav>
     </header>
@@ -67,7 +71,7 @@
                         <h1 class="wedding-of">the wedding of</h1>
                         <h2 class="couple-names guy">GUY</h2>
                         <span class="and text-left">and<span class="couple-names bex">REBECCA</span></span>
-                        
+
                         <p class="date">Thursday 27th Feb 2025</p>
                         <p class="date deer-park">Deer Park Country House</p>
                         <p class="ceremony-time">1.30PM Ceremony</p>
@@ -77,14 +81,32 @@
             </div>
         </section>
 
+        <section class="section-bg">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 px-0 partition bg-light">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+
+
+
+
         <!-- Details Section -->
         <section id="details" class="section-bg">
             <div class="container">
-                <h2 class="section-title text-center menu-title mb-3">Details</h2>
                 <div class="row">
+                    <div class="col-12">
+                        <h2 class="section-title text-center menu-title mb-3">Details</h2>
+                    </div>
                     <div class="col-md-6">
                         <h3 class="subsection-title">VENUE</h3>
-                        <p>Deer Park Country House is a beautiful, Georgian manor in Honiton. We have exclusive hire of the estate for the duration of Thursday 27th February 2025.</p>
+                        <p>Deer Park Country House is a beautiful, Georgian manor in Honiton. We have exclusive hire of
+                            the estate for the duration of Thursday 27th February 2025.</p>
                         <p>Arrival is welcome from 12.30pm and celebrations will end at midnight.</p>
                         <p>There is plentiful parking on-site.</p>
                         <p>The bar is card only.</p>
@@ -96,47 +118,78 @@
                     <div class="col-md-6 extras">
                         <h3 class="subsection-title">EXTRAS</h3>
                         <p>Formal and smart casual attire is welcome.</p>
-                        <p>Your company is all we hope for but if you wish to bring a gift, cash towards our honeymoon would be very much appreciated.</p>
+                        <p>Your company is all we hope for but if you wish to bring a gift, cash towards our honeymoon
+                            would be very much appreciated.</p>
                         <p>RSVP by 30th November.</p>
                         <p>Guy - 07927152928<br>
-                           Bex - 07792116913</p>
-                        
+                            Bex - 07792116913</p>
+
                     </div>
                 </div>
             </div>
         </section>
 
-       <!-- Accommodation Section -->
-<section id="accommodation" class="section-bg">
-    <div class="container">
-        <h2 class="section-title text-center mb-4">Accommodation</h2>
-        <div class="row justify-content-center">
-            <div class="col-12 col-md-10 col-lg-8">
-                <h3 class="room-type mb-3">DOUBLE COTTAGE ROOM £150</h3>
-                <h3 class="room-type mb-4">SINGLE COTTAGE ROOM £75</h3>
-                
-                <div class="accommodation-info mb-5">
-                    <p>Within 50 yards of the house, there are plenty of cottage rooms available to book for the night of the wedding.</p>
-                    <p>The booking will include breakfast with us on Friday morning.</p>
-                    <p>Check in will be after the wedding breakfast, before the evening celebrations begin.</p>
-                    <p>Please phone Deer Park to book a room.</p>
-                    <p>Tel: 01404 41266</p>
+        <!-- PARTITION 2 -->
+        <section class="section-bg">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 px-0 partition bg-light">
+                    </div>
                 </div>
-                
-                <h3 class="local-area-title mb-4">The Local Area</h3>
-                <ul class="local-area-list">
-                    <li>The Pig at Combe</li>
-                    <li>Premier Inn, Honiton</li>
-                    <li>Sidmouth Hotels</li>
-                    <li>Ferndale Cottage, Stockland</li>
-                    <li>Little Rock, Offwell</li>
-                    <li>Self-Cater Sidmouth</li>
-                    <li>Sid Valley View</li>
-                </ul>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
+
+
+
+        <!-- Accommodation Section -->
+        <section id="accommodation" class="section-bg">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <h2 class="section-title text-center" id="accommodation-title">Accommodation</h2>
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-10 col-lg-8">
+                                <h3 class="room-type mb-2">DOUBLE COTTAGE ROOM £150</h3>
+                                <h3 class="room-type mb-4">SINGLE COTTAGE ROOM £75</h3>
+
+                                <div class="accommodation-info mb-5 px-4">
+                                    <p>Within 50 yards of the house, there are plenty of cottage rooms available to book
+                                        for the night of the wedding.</p>
+                                    <p>The booking will include breakfast with us on Friday morning.</p>
+                                    <p>Check in will be after the wedding breakfast, before the evening celebrations
+                                        begin.</p>
+                                    <p>Please phone Deer Park to book a room.</p>
+                                    <p>Tel: 01404 41266</p>
+                                </div>
+
+                                <h3 class="local-area-title mb-4">The Local Area</h3>
+                                <ul class="local-area-list">
+                                    <li>The Pig at Combe</li>
+                                    <li>Premier Inn, Honiton</li>
+                                    <li>Sidmouth Hotels</li>
+                                    <li>Ferndale Cottage, Stockland</li>
+                                    <li>Little Rock, Offwell</li>
+                                    <li>Self-Cater Sidmouth</li>
+                                    <li>Sid Valley View</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- PARTITION 3 -->
+        <section class="section-bg">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-12 px-0 partition bg-light">
+                       
+                        
+                    </div>
+                </div>
+            </div>
+        </section>  
 
         <!-- Menu Section -->
         <section id="menu" class="section-bg">
@@ -144,7 +197,7 @@
                 <div class="row justify-content-center">
                     <div class="col-12 col-md-10 col-lg-8 text-center menu-text">
                         <h2 class="menu-title mb-3">Menu</h2>
-                        
+
                         <h3 class="menu-section mb-2 course-title">STARTER</h3>
                         <p class="menu-item item-title">Ham Hock Terrine</p>
                         <p class="menu-item item-description">Plum Chutney, Heritage Carrots, Date & Walnut Bread</p>
@@ -152,15 +205,17 @@
                         <p class="menu-item item-description">Lime Mayonnaise, Dressed Baby Leaves</p>
                         <p class="menu-item item-title">Grilled Capricorn Goat's Cheese</p>
                         <p class="menu-item item-description">Poached Pear, Pickled Celery & Pain d'Epice</p>
-                        
+
                         <h3 class="menu-section mb-2 course-title">MAIN</h3>
                         <p class="menu-item item-title">Roast Breast of Chicken</p>
-                        <p class="menu-item item-description">Gratin Potatoes, Celeriac Purée, Hazelnut & Truffle Pesto</p>
+                        <p class="menu-item item-description">Gratin Potatoes, Celeriac Purée, Hazelnut & Truffle Pesto
+                        </p>
                         <p class="menu-item item-title">Seared Fillet of Bass</p>
-                        <p class="menu-item item-description">Crushed Potatoes, Spinach & Baby Leeks, Beurre Noisette</p>
+                        <p class="menu-item item-description">Crushed Potatoes, Spinach & Baby Leeks, Beurre Noisette
+                        </p>
                         <p class="menu-item item-title">Butternut Squash Ravioli</p>
                         <p class="menu-item item-description">Pumpkin Purée, Tenderstem Brocolli, Sage Butter</p>
-                        
+
                         <h3 class="menu-section mb-2 course-title">DESSERT</h3>
                         <p class="menu-item item-title">Dark Chocolate Mousse</p>
                         <p class="menu-item item-description">Pistachio Ice Cream, Griottine Cherries</p>
@@ -168,10 +223,11 @@
                         <p class="menu-item item-description">Devon Clotted Cream, Butterscotch Sauce</p>
                         <p class="menu-item item-title">Caramelised Lemon Tart</p>
                         <p class="menu-item item-description">Raspberry Sorbet</p>
-                        
+
                         <div class="rsvp-note mt-4">
                             <img src="assets/images/circle-deer.svg" alt="Deer Icon" class="deer-icon mb-3">
-                            <p class="rsvp-text">RSVP with your choice or let us know of any dietary requirements by 30th November.</p>
+                            <p class="rsvp-text">RSVP with your choice or let us know of any dietary requirements by
+                                30th November.</p>
                         </div>
                     </div>
                 </div>
@@ -183,10 +239,10 @@
     <footer class="bg-light">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-md-4 text-center">
+                <div class="col-12 text-center">
+                    <p  class="py-2 mb-0" id="date">27 . 02 . 25</p>
+                    <p class="footer-text py-1 mb-1 mt-0">We look forward to celebrating with you!</p>
                     
-                    <p class="footer-text">We look forward to celebrating with you!</p>
-                    <p id="date">27 . 02 . 25</p>
                     </ul>
                 </div>
             </div>
@@ -194,7 +250,8 @@
     </footer>
 
     <!-- RSVP Modal -->
-    <div class="modal fade" id="rsvpModal" tabindex="-1" role="dialog" aria-labelledby="rsvpModalLabel" aria-hidden="true">
+    <div class="modal fade" id="rsvpModal" tabindex="-1" role="dialog" aria-labelledby="rsvpModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -204,42 +261,96 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <iframe src="https://docs.google.com/forms/d/e/YOUR_GOOGLE_FORM_ID/viewform?embedded=true" width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                    <iframe src="https://docs.google.com/forms/d/e/YOUR_GOOGLE_FORM_ID/viewform?embedded=true"
+                        width="100%" height="500" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
                 </div>
             </div>
         </div>
     </div>
 
+    <button id="confettiButton" aria-label="Celebrate">
+        <i class="fi fi-tr-party-horn"></i>
+    </button>
+
     <!-- JavaScript Dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js"></script>
-    
-              
 
-  
-  <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    function randomInRange(min, max) {
-      return Math.random() * (max - min) + min;
-    }
+    <!-- AI SCRIPT FROM PERPLEXITY - MAKES NAVIGATION SCROLL SMOOTHLY DOWN THE PAGE AND ADJUSTS FOR HEIGHT OF THE NAVBAR (ONLY APPLIES TO MAIN NAV LINKS)-->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Function to adjust scroll position
+            function adjustScroll(hash) {
+                const navbar = document.querySelector('nav');
+                const target = document.querySelector(hash);
+                if (target && navbar) {
+                    const navbarHeight = navbar.offsetHeight;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset;
+                    window.scrollTo({
+                        top: targetPosition - navbarHeight,
+                        behavior: 'smooth'
+                    });
+                }
+            }
 
-    function triggerConfetti() {
-      confetti({
-        angle: randomInRange(55, 125),
-        spread: randomInRange(50, 70),
-        particleCount: randomInRange(50, 100),
-        origin: { y: 1 },
-        colors: ['#FFC0CB', '#FFB6C1', '#ffffff'], // Various shades of pink
-        scalar: randomInRange(0.4, 0.6) // This makes the confetti smaller
-      });
-    }
+            // Handle initial page load with hash
+            if (window.location.hash) {
+                setTimeout(() => adjustScroll(window.location.hash), 0);
+            }
 
-    document.getElementById('confettiButton').addEventListener('click', triggerConfetti);
-  });
-  </script>
+            // Handle clicks on main navigation anchor links
+            document.querySelectorAll('nav a[href^="#"], .main-nav a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const hash = this.getAttribute('href');
+                    adjustScroll(hash);
+                    // Update URL without triggering a scroll
+                    history.pushState(null, null, hash);
+                });
+            });
+
+            // Handle clicks on tab navigation links without adjustment
+            document.querySelectorAll('.nav-tabs a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const hash = this.getAttribute('href');
+                    document.querySelector(hash).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    // Update URL without triggering a scroll
+                    history.pushState(null, null, hash);
+                });
+            });
+        });
+
+    </script>
+
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            function randomInRange(min, max) {
+                return Math.random() * (max - min) + min;
+            }
+
+            function triggerConfetti() {
+                confetti({
+                    angle: randomInRange(55, 125),
+                    spread: randomInRange(50, 70),
+                    particleCount: randomInRange(50, 100),
+                    origin: { y: .85 },
+                    colors: ['#FFC0CB', '#FFB6C1', '#ffffff'], // Various shades of pink
+                    scalar: randomInRange(0.4, 0.6) // This makes the confetti smaller
+                });
+            }
+
+            document.getElementById('confettiButton').addEventListener('click', triggerConfetti);
+        });
+    </script>
 </body>
+
 </html>
 
 </body>
+
 </html>
