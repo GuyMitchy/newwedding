@@ -29,13 +29,13 @@
     <header>
         <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
             <div class="container-fluid nav-container">
-                <a class="navbar-brand" href="#home"><img src="assets/images/black-logo.png" alt="Guy & Bex"
+                <a class="navbar-brand py-2" href="#home"><img src="assets/images/heart.png" alt="Guy & Bex"
                         class="logo"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <a class="nav-link" href="#main">Home</a>
@@ -50,13 +50,13 @@
                             <a class="nav-link" href="#menu">Menu</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" data-toggle="modal" data-target="#rsvpModal">RSVP</a>
+                            <a class="nav-link" href="#" data-toggle="modal" data-target="#rsvpModal">Rsvp</a>
                         </li>
                     </ul>
-                    
+
                 </div>
                 <!-- Add the confetti button here -->
-                
+
             </div>
         </nav>
     </header>
@@ -84,7 +84,8 @@
         <section class="section-bg">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-12 px-0 partition bg-light">
+                    <div class="col-12 px-0 partition bg-light d-flex justify-content-center align-items-center">
+                        <img src="assets/images/heart-border.png" alt="Guy & Bex" class="heart-border">
                     </div>
                 </div>
             </div>
@@ -101,29 +102,42 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2 class="section-title text-center menu-title mb-3">Details</h2>
+                        <h2 class="section-title text-center">Details</h2>
                     </div>
-                    <div class="col-md-6">
+                </div>
+                <div class="row">
+                    <div class="col-md-4">
                         <h3 class="subsection-title">VENUE</h3>
                         <p>Deer Park Country House is a beautiful, Georgian manor in Honiton. We have exclusive hire of
                             the estate for the duration of Thursday 27th February 2025.</p>
                         <p>Arrival is welcome from 12.30pm and celebrations will end at midnight.</p>
                         <p>There is plentiful parking on-site.</p>
                         <p>The bar is card only.</p>
-                        <p>
-                            Buckerell Village, Weston, Honiton, EX14 3PG<br>
-                            01404 41266
-                        </p>
                     </div>
-                    <div class="col-md-6 extras">
+
+                    <div class="col-md-4">
+                        <div
+                            class="d-flex flex-column justify-content-center align-items-center h-100 rings-address-container">
+                            <div class="rings-container">
+                                <img src="assets/images/rings.png" alt="Wedding Rings" class="rings img-fluid my-auto">
+
+                                <p class="details-text">
+                                    Buckerell Village, Weston, Honiton, EX14 3PG<br>
+                                    01404 41266
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
                         <h3 class="subsection-title">EXTRAS</h3>
                         <p>Formal and smart casual attire is welcome.</p>
                         <p>Your company is all we hope for but if you wish to bring a gift, cash towards our honeymoon
                             would be very much appreciated.</p>
+                        <br>
                         <p>RSVP by 30th November.</p>
                         <p>Guy - 07927152928<br>
                             Bex - 07792116913</p>
-
                     </div>
                 </div>
             </div>
@@ -133,7 +147,8 @@
         <section class="section-bg">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-12 px-0 partition bg-light">
+                    <div class="col-12 px-0 partition bg-light d-flex justify-content-center align-items-center">
+                        <img src="assets/images/heart-border.png" alt="Guy & Bex" class="heart-border">
                     </div>
                 </div>
             </div>
@@ -183,13 +198,14 @@
         <section class="section-bg">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-12 px-0 partition bg-light">
-                       
-                        
+                    <div class="col-12 px-0 partition bg-light d-flex justify-content-center align-items-center">
+                        <img src="assets/images/heart-border.png" alt="Guy & Bex" class="heart-border">
+
+
                     </div>
                 </div>
             </div>
-        </section>  
+        </section>
 
         <!-- Menu Section -->
         <section id="menu" class="section-bg">
@@ -240,9 +256,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center">
-                    <p  class="py-2 mb-0" id="date">27 . 02 . 25</p>
+                    <p class="py-2 mb-0" id="date">27 . 02 . 25</p>
                     <p class="footer-text py-1 mb-1 mt-0">We look forward to celebrating with you!</p>
-                    
+
                     </ul>
                 </div>
             </div>
@@ -347,10 +363,6 @@
             document.getElementById('confettiButton').addEventListener('click', triggerConfetti);
         });
     </script>
-</body>
-
-</html>
-
 </body>
 
 </html>

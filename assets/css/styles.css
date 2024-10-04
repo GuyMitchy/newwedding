@@ -28,17 +28,21 @@ body {
 
 .logo {
 
-    height: 55px;
+    height: 45px;
     padding-top: 5px;
     padding-bottom: 5px;
 
 }
 
 
+
+
 .nav-link {
-    font-family: 'Bellefair', serif !important;
-    font-size: 1rem;
+    font-family: 'Le Jour Script', serif !important;
+    font-size: 0.8rem;
     letter-spacing: 2px;
+    color: black !important;
+    font-weight: 300;
 }
 
 .nav-item {
@@ -125,13 +129,11 @@ body {
 
 }
 
-.partition-img {
-    height: 50px;
-    position: absolute;
-    top: 20%;
-    left: 90%;
-
+.heart-border {
+    height: 14px;
+    
 }
+
 
 /* HOME SECTION */
 
@@ -260,6 +262,7 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    padding: 2rem;
 
 
 }
@@ -276,19 +279,30 @@ body {
     margin-bottom: 0.5rem;
     text-transform: uppercase;
     text-align: center;
-    margin-top: 1rem;
+    
     margin-bottom: 1;
 }
 
-.col-md-6>p {
-    font-family: 'Bellefair', serif;
-    font-size: 1rem;
-    letter-spacing: 1.2px;
-    margin-bottom: 0.5rem;
-    text-align: center;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    color: #000000c6;
+.col-md-4>p {
+        font-family: 'Bellefair', serif;
+        font-size: 1rem;
+        letter-spacing: 1.2px;
+        margin-bottom: 0.5rem;
+        text-align: center;
+        padding-left: 1rem;
+        padding-right: 1rem;
+        color: #000000c6;
+    }
+
+    .details-text {
+        font-family: 'Bellefair', serif;
+        font-size: 1rem;
+        letter-spacing: 1.2px;
+        
+        text-align: center;
+        padding: 0 1rem 1rem 1rem;
+        color: #000000c6;   
+
 }
 
 .extras {
@@ -309,9 +323,9 @@ body {
 .section-title {
     font-family: 'Le Jour Script', sans-serif;
     font-size: 1.8rem;
-    margin-bottom: 1rem;
+   
     text-align: center;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 #accommodation-title {
@@ -339,7 +353,7 @@ body {
 
 .local-area-title {
     font-family: 'Le Jour Script', serif;
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     letter-spacing: 2px;
     text-transform: lowercase;
     text-align: center;
@@ -355,6 +369,16 @@ body {
     padding-left: 0;
     margin-bottom: 2rem;
 }
+
+.rings {
+    height: 100px;
+    margin-top: 3rem !important;
+    
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-bottom: 2rem !important;
+}   
 
 
 
@@ -380,7 +404,8 @@ body {
 .menu-title {
     font-family: 'Le Jour Script', serif;
     font-size: 2rem;
-    margin-top: 4rem;
+    margin-top: 3rem;
+    margin-bottom: 0 !important;
 }
 
 .menu-text {
@@ -508,8 +533,23 @@ body {
 }
 
 /* Hide on larger screens if desired */
-@media (min-width: 992px) {
-    #confettiButton {
-        display: none;
+
+
+
+@media (max-width: 767px) {
+    #details .col-md-4 {
+        margin-bottom: 2rem;
+    }
+    #details .col-md-4:last-child {
+        margin-bottom: 0;
+    }
+    .address-container {
+        margin-bottom: 1rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .rings-image-container {
+        margin-top: auto; /* Push the image to the bottom on larger screens */
     }
 }
