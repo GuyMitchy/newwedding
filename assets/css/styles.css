@@ -38,10 +38,9 @@ body {
 
 
 .nav-link {
-    font-family: 'Le Jour Script', serif !important;
+    font-family: 'Bellefair', sans-serif !important;
     font-size: 0.8rem;
     letter-spacing: 2px;
-    color: black !important;
     font-weight: 300;
 }
 
@@ -372,12 +371,12 @@ body {
 
 .rings {
     height: 100px;
-    margin-top: 3rem !important;
+    
     
     margin-left: auto;
     margin-right: auto;
     display: block;
-    margin-bottom: 2rem !important;
+  
 }   
 
 

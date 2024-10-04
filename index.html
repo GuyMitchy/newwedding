@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guy & Bex Wedding</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
+    
     <link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Le+Jour:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/2.6.0/uicons-thin-rounded/css/uicons-thin-rounded.css'>
+    <link rel="stylesheet" href="assets/css/styles.css">
     <script src="https://cdn.jsdelivr.net/npm/@tsparticles/confetti@3.0.3/tsparticles.confetti.bundle.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
     <script>
@@ -38,19 +39,19 @@
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <a class="nav-link" href="#main">Home</a>
+                            <a class="nav-link" href="#home">HOME</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#details">Details</a>
+                            <a class="nav-link" href="#details">DETAILS</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#accommodation">Accommodation</a>
+                            <a class="nav-link" href="#accommodation">ACCOMMODATION</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#menu">Menu</a>
+                            <a class="nav-link" href="#menu">MENU</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#" data-toggle="modal" data-target="#rsvpModal">Rsvp</a>
+                            <a class="nav-link" href="#" data-toggle="modal" data-target="#rsvpModal">RSVP</a>
                         </li>
                     </ul>
 
@@ -61,9 +62,9 @@
         </nav>
     </header>
 
-    <main id="main">
+    <main>
         <!-- Home Section -->
-        <section id="home" class="section-bg">
+        <section id="home" class="main-section section-bg">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12 text-center text-shadow">
@@ -75,7 +76,7 @@
                         <p class="date">Thursday 27th Feb 2025</p>
                         <p class="date deer-park">Deer Park Country House</p>
                         <p class="ceremony-time">1.30PM Ceremony</p>
-                        <p class="reception">with reception to follow</p>
+                        <p class="reception mb-2">with reception to follow</p>
                     </div>
                 </div>
             </div>
@@ -98,16 +99,16 @@
 
 
         <!-- Details Section -->
-        <section id="details" class="section-bg">
+        <section id="details" class="main-section section-bg">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2 class="section-title text-center">Details</h2>
+                        <h2 class="section-title text-center mt-4 mb-4">Details</h2>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-md-4">
-                        <h3 class="subsection-title">VENUE</h3>
+                        <h3 class="subsection-title mt-2">VENUE</h3>
                         <p>Deer Park Country House is a beautiful, Georgian manor in Honiton. We have exclusive hire of
                             the estate for the duration of Thursday 27th February 2025.</p>
                         <p>Arrival is welcome from 12.30pm and celebrations will end at midnight.</p>
@@ -116,11 +117,11 @@
                     </div>
 
                     <div class="col-md-4">
-                        <div
-                            class="d-flex flex-column justify-content-center align-items-center h-100 rings-address-container">
-                            <div class="rings-container">
-                                <img src="assets/images/rings.png" alt="Wedding Rings" class="rings img-fluid my-auto">
-
+                        <div class="d-flex flex-column justify-content-center align-items-center h-100 rings-address-container">
+                            <div class="rings-container mb-3 mb-md-5 order-2 order-md-1">
+                                <img src="assets/images/rings.png" alt="Wedding Rings" class="rings img-fluid">
+                            </div>
+                            <div class="address-container text-center order-1 order-md-2">
                                 <p class="details-text">
                                     Buckerell Village, Weston, Honiton, EX14 3PG<br>
                                     01404 41266
@@ -157,7 +158,7 @@
 
 
         <!-- Accommodation Section -->
-        <section id="accommodation" class="section-bg">
+        <section id="accommodation" class="main-section section-bg">
             <div class="container">
                 <div class="row">
                     <div class="col-12">
@@ -208,7 +209,7 @@
         </section>
 
         <!-- Menu Section -->
-        <section id="menu" class="section-bg">
+        <section id="menu" class="main-section section-bg">
             <div class="container">
                 <div class="row justify-content-center">
                     <div class="col-12 col-md-10 col-lg-8 text-center menu-text">
@@ -362,6 +363,29 @@
 
             document.getElementById('confettiButton').addEventListener('click', triggerConfetti);
         });
+    </script>
+
+    <script>
+    
+    document.addEventListener("DOMContentLoaded", function() {
+    const sections = document.querySelectorAll("section.main-section");
+    const navLinks = document.querySelectorAll(".navbar-nav .nav-link:not([data-toggle='modal'])");
+
+    function changeNavActiveState() {
+        let scrollPosition = window.scrollY + 150; // Increased offset
+
+        sections.forEach((section, index) => {
+            if (section.offsetTop <= scrollPosition && 
+                section.offsetTop + section.offsetHeight > scrollPosition) {
+                navLinks.forEach((link) => link.classList.remove('active'));
+                navLinks[index].classList.add('active');
+            }
+        });
+    }
+
+    changeNavActiveState();
+    window.addEventListener("scroll", changeNavActiveState);
+});
     </script>
 </body>
 
