@@ -901,3 +901,8 @@ body.loaded .landing-overlay {
     }
 
 }
+
+/* PARALAX JITTER FIX */
+.full-height {
+    height: calc(var(--vh, 1vh) * 100);
+  }
