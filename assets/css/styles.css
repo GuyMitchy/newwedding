@@ -17,8 +17,11 @@
 
 body {
     padding-top: 56px;
-    /* Adjust for fixed navbar */
+    
+    overscroll-behavior-y: none;
 }
+    /* Adjust for fixed navbar */
+
 
 /* LANDING OVERLAY */
 .landing-overlay {
