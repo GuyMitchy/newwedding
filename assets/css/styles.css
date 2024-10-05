@@ -120,7 +120,10 @@ body.loaded .landing-overlay {
 }
 
 
+.navbar-nav .nav-link {
+    padding-left: 11px;
 
+}
 
 .nav-link {
     font-family: 'Bellefair', sans-serif !important;
@@ -129,6 +132,7 @@ body.loaded .landing-overlay {
     letter-spacing: 2px;
     font-weight: 300;
     transition: all 0.3s ease; /* Smooth transition for all changes */
+    
 }
 
 
