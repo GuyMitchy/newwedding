@@ -27,7 +27,8 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #ffe6e9; /* Light pink */
+    background-color: #ffe6e9;
+    /* Light pink */
     z-index: 9999;
     display: flex;
     justify-content: center;
@@ -41,7 +42,8 @@ body.loaded .landing-overlay {
 
 .reveal-button-position {
     position: absolute;
-    bottom: 50px; /* Adjust this value to move the button up or down */
+    bottom: 50px;
+    /* Adjust this value to move the button up or down */
     left: 50%;
     transform: translateX(-50%);
 }
@@ -49,9 +51,11 @@ body.loaded .landing-overlay {
 .reveal-button {
     background: none;
     border: none;
-    color: #000000; /* Adjust color as needed */
-    font-size: 2rem; /* Adjust size as needed */
-    
+    color: #000000;
+    /* Adjust color as needed */
+    font-size: 2rem;
+    /* Adjust size as needed */
+
     padding: 10px;
     transition: opacity 0.3s ease;
 }
@@ -73,21 +77,21 @@ body.loaded .landing-overlay {
 .landing-rings {
     max-width: 200px;
     margin-bottom: 20px;
-   
+
 }
 
 .landing-names {
     font-family: 'Le Jour Script', sans-serif;
-    font-size: 1.6rem;
+    font-size: 1.5rem;
     letter-spacing: 6px;
     color: #1a1a1a;
-}   
+}
 
 .landing-date {
     font-family: 'Bellefair', sans-serif;
-    font-size: 1.2rem;
+    font-size: 1rem;
     letter-spacing: 6px;
-    color: #1a1a1a;
+    color: #000000;
 }
 
 body.loaded .landing-overlay {
@@ -113,7 +117,7 @@ body.loaded .landing-overlay {
 
 .nav-link {
     font-family: 'Bellefair', sans-serif !important;
-    font-size: 0.8rem;
+    font-size: 0.7rem;
     letter-spacing: 2px;
     font-weight: 300;
 }
@@ -172,13 +176,34 @@ body.loaded .landing-overlay {
 
 
 
+
+
+/* PARTITION */
+.partition {
+    height: 20px;
+    position: relative;
+    box-shadow:
+        0 -2px 4px -1px rgba(0, 0, 0, 0.1),
+        0 2px 4px -1px rgba(0, 0, 0, 0.1);
+
+
+}
+
+.heart-border {
+    height: 14px;
+
+}
+
+
+/* HOME SECTION */
+
 #home {
     background-image: url('../images/flowerbackground.png');
 
 
     display: flex;
 
-    
+
     text-align: center;
     height: 100vh;
     background-size: cover;
@@ -192,25 +217,6 @@ body.loaded .landing-overlay {
 
 }
 
-/* PARTITION */
-.partition {
-    height: 20px;
-    position: relative;
-    box-shadow: 
-        0 -2px 4px -1px rgba(0, 0, 0, 0.1),
-        0 2px 4px -1px rgba(0, 0, 0, 0.1);
-    
-
-}
-
-.heart-border {
-    height: 14px;
-    
-}
-
-
-/* HOME SECTION */
-
 
 
 /* .text-shadow {
@@ -221,6 +227,9 @@ body.loaded .landing-overlay {
 
 
 /* PLEASE JOIN US */
+/* Base styles (for mobile devices) */
+
+
 .invitation-text {
     font-family: 'Bellefair', serif;
     font-size: 1.2rem;
@@ -228,11 +237,7 @@ body.loaded .landing-overlay {
     margin-top: 7rem;
     position: relative;
     bottom: 40px;
-
-
 }
-
-/* WEDDING OF */
 
 .wedding-of {
     font-family: 'Le Jour Script', sans-serif;
@@ -243,7 +248,6 @@ body.loaded .landing-overlay {
     bottom: 40px;
 }
 
-/* COUPLE NAMES */
 .couple-names {
     font-family: 'Bellefair', serif;
     font-size: 2rem;
@@ -251,89 +255,237 @@ body.loaded .landing-overlay {
     margin-bottom: 1rem;
     text-transform: uppercase;
     letter-spacing: 6px;
-    
 }
 
-/* GUY */
 .guy {
     position: relative;
-
     right: 105px;
 }
 
-
-/* AND */
 .and {
     font-family: 'Le Jour Script', sans-serif;
     font-size: 1.5rem;
     position: relative;
     bottom: 20px;
     right: 20px;
-
 }
 
-/* BEX */
 .bex {
     position: relative !important;
     left: 20px;
     top: 5px;
     color: #ffffff;
-
 }
 
-/* DATE */
 .date,
 .ceremony-time {
     font-family: 'Bellefair', serif;
     font-size: 1rem;
     letter-spacing: 2px;
     text-transform: uppercase;
-
 }
 
-/* THURSDAY 27th */
 .date {
     margin-top: 5rem;
     letter-spacing: 4px;
     margin-bottom: 0;
     font-size: 1.2rem;
-
 }
 
-
-/* DEER PARK */
 .deer-park {
     color: #ffffff;
     margin-top: 0;
     font-size: 0.8rem;
 }
 
-/* TIME */
 .ceremony-time {
     margin-top: 2rem;
     margin-bottom: 0;
-
-
     font-size: 1.2rem;
     letter-spacing: 4px;
 }
-
-
 
 /* RECEPTION */
 .reception {
     font-family: 'Le Jour Script', sans-serif;
     margin-top: 0.5rem;
     font-size: 1.2rem;
+    margin-bottom: 10rem;
 
 
 }
+
+/* Media queries for responsive growth */
+@media (min-width: 576px) {
+    .invitation-text {
+        font-size: 1.4rem;
+    }
+
+    .wedding-of,
+    .reception {
+        font-size: 2rem;
+    }
+
+    .couple-names {
+        font-size: 2.2rem;
+    }
+
+    .and {
+        font-size: 1.7rem;
+    }
+
+    .date,
+    .ceremony-time {
+        font-size: 1.3rem;
+    }
+
+    .deer-park {
+        font-size: 0.9rem;
+    }
+
+    .reception {
+        font-size: 1.4rem;
+    }
+
+    .guy {
+        right: 110px;
+    }
+
+}
+
+@media (min-width: 768px) {
+    .invitation-text {
+        font-size: 1.4rem;
+    }
+
+    .wedding-of {
+        font-size: 2.0rem;
+    }
+
+    .couple-names {
+        font-size: 2.0rem;
+    }
+
+    .and {
+        font-size: 1.9rem;
+    }
+
+    .date,
+    .ceremony-time {
+        font-size: 1.4rem;
+    }
+
+    .deer-park {
+        font-size: 1rem;
+    }
+
+    .reception {
+        font-size: 1.6rem;
+    }
+
+    .guy {
+        right: 125px;
+    }
+
+    .and {
+        right: 25px;
+    }
+
+    .bex {
+        left: 25px;
+    }
+
+    #home {
+        height: 120vh;
+    }
+}
+
+@media (min-width: 992px) {
+    .invitation-text {
+        font-size: 1.4rem;
+    }
+
+    .wedding-of {
+        font-size: 2.2rem;
+    }
+
+    .couple-names {
+        font-size: 2.2rem;
+    }
+
+    .and {
+        font-size: 2.1rem;
+    }
+
+    .date,
+    .ceremony-time {
+        font-size: 1.4rem;
+    }
+
+    .deer-park {
+        font-size: 1rem;
+    }
+
+    .reception {
+        font-size: 1.6rem;
+        margin-bottom: 2rem;
+    }
+
+    .guy {
+        right: 130px;
+    }
+
+    .and {
+        right: 25px;
+    }
+
+    .bex {
+        left: 25px;
+    }
+}
+
+
+@media (min-width: 1200px) {
+
+    .guy {
+        right: 130px;
+    }
+
+    .and {
+        right: 25px;
+    }
+
+    .bex {
+        left: 25px;
+    }
+
+    #home {
+        height: 120vh;
+    }
+}
+
+@media (min-width: 1400px) {
+
+    #home {
+        height: 100vh;
+    }
+
+    .couple-names {
+        font-size: 2.4rem;
+    }
+
+}
+
+
+
+
+
 
 /* DETAILS SECTION */
 #details {
     background-image: url('../images/background2.png');
     background-attachment: fixed;
-    
+
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -343,45 +495,52 @@ body.loaded .landing-overlay {
 }
 
 
-.section-title {
+.details-section-title {
+
+    font-family: 'Le Jour Script', sans-serif;
     font-size: 1.8rem;
+
+    text-align: center;
+    margin-top: 1rem;
 }
 
 .subsection-title {
     font-family: 'Bellefair', serif;
+    color: #000000;
     font-size: 1.2rem;
     letter-spacing: 4px;
     margin-bottom: 0.5rem;
     text-transform: uppercase;
     text-align: center;
-    
+
     margin-bottom: 1;
 }
 
 .details-text>p {
-        font-family: 'Bellefair', serif;
-        font-size: 1rem;
-        letter-spacing: 1.2px;
-        margin-bottom: 0.5rem;
-        text-align: center;
-        padding-left: 1rem;
-        padding-right: 1rem;
-        color: #000000c6;
-    }
+    font-family: 'Bellefair', serif;
+    font-size: 1rem;
+    letter-spacing: 1.2px;
+    margin-bottom: 0.5rem;
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: #000000;
+}
 
-    .details-text {
-        font-family: 'Bellefair', serif;
-        font-size: 1rem;
-        letter-spacing: 1.2px;
-        
-        text-align: center;
-        
-        color: #000000c6;   
+.details-text {
+    font-family: 'Bellefair', serif;
+    font-size: 1rem;
+    letter-spacing: 1.2px;
+
+    text-align: center;
+
+    color: #000000;
 
 }
 
 .extras {
     margin-bottom: 2rem;
+    color: #000000;
 
 
 }
@@ -395,17 +554,17 @@ body.loaded .landing-overlay {
     background-size: cover;
 }
 
-.section-title {
+.accommodation-section-title {
     font-family: 'Le Jour Script', sans-serif;
     font-size: 1.8rem;
-   
+    color: #ffffff;
     text-align: center;
-    margin-top: 1rem;
     
+
 }
 
 #accommodation-title {
-    margin-top: 5rem;
+    margin-top: 4rem;
     margin-bottom: 2rem;
 }
 
@@ -418,6 +577,7 @@ body.loaded .landing-overlay {
     text-align: center;
     padding-left: 1rem;
     padding-right: 1rem;
+    color: #000000;
 }
 
 .accommodation-info {
@@ -425,6 +585,8 @@ body.loaded .landing-overlay {
     font-size: 1rem;
     letter-spacing: 1.2px;
     text-align: center;
+    justify-content: center;
+    color: #000000;
 }
 
 .local-area-title {
@@ -444,27 +606,99 @@ body.loaded .landing-overlay {
     list-style-type: none;
     padding-left: 0;
     margin-bottom: 2rem;
+    color: #000000;
 }
 
-.rings {
-    height: 100px;
-    
-    
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-  
-}   
-.bunny-container {
-    position: absolute;
-    bottom: 0; /* Adjust this value to move it up or down */
-    right: 250px; /* Adjust this value to move it left or right */
-    z-index: 1000; /* Ensure it's above other content */
+
+/* Custom styles for accommodation tabs */
+#accommodationTabs {
+    margin-bottom: 1.6rem;
+    border-bottom: none;
+    /* Remove the default bottom border */
+    flex-wrap: nowrap;
 }
 
-.bunny-container img {
-   height: 300px;
+#accommodationTabs .nav-item {
+    margin: 0 1rem;
+    /* Add space between tab titles */
+
 }
+
+#accommodationTabs .nav-link {
+    color: #000000;
+    opacity: 0.7;
+    font-family: 'Bellefair', serif;
+    font-weight: 100;
+    font-size: 1rem;
+    /* Increase font size */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border: none;
+    /* Remove default border */
+    background-color: transparent;
+    padding: 0;
+    transition: all 0.3s ease;
+}
+
+#accommodationTabs .nav-link:hover {
+    text-decoration: none;
+    /* Remove underline on hover */
+
+}
+
+#accommodationTabs .nav-link.active {
+
+    border-bottom: 1px solid #000000;
+    /* Add underline for active tab */
+    background-color: transparent;
+    opacity: 1;
+}
+
+.tab-content {
+
+    padding-top: 0.5rem;
+    /* Increase space between tabs and content */
+}
+
+.highlight-text {
+    color: #ffffff;
+    /* White text */
+
+}
+
+/* Style for tab pane to ensure content is centered */
+.tab-pane {
+    display: flex;
+    justify-content: center;
+}
+
+.tab-pane>div {
+    max-width: 800px;
+    /* Adjust as needed */
+}
+
+.accommodation-link {
+    opacity: 0.7;
+}
+
+.accommodation-link:hover {
+    opacity: 1;
+    text-decoration: none;
+}
+
+
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    #accommodationTabs .nav-link {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
 
 /* MENU SECTION */
 #menu {
@@ -482,7 +716,7 @@ body.loaded .landing-overlay {
 .menu-title {
     font-family: 'Le Jour Script', serif;
     font-size: 2rem;
-    margin-top: 3rem;
+    margin-top: 4rem;
     margin-bottom: 0 !important;
 }
 
@@ -573,22 +807,27 @@ body.loaded .landing-overlay {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: all 0.3s ease;
     border: none;
     outline: none;
-    padding: 0; /* Remove any padding */
-    text-decoration: none; /* Remove any text decoration */
-    overflow: hidden; /* Add this to ensure the icon doesn't overflow */
-    touch-action: manipulation; /* Add this line */
-    -webkit-tap-highlight-color: transparent; /* Add this line for WebKit browsers */
+    padding: 0;
+    /* Remove any padding */
+    text-decoration: none;
+    /* Remove any text decoration */
+    overflow: hidden;
+    /* Add this to ensure the icon doesn't overflow */
+    touch-action: manipulation;
+    /* Add this line */
+    -webkit-tap-highlight-color: transparent;
+    /* Add this line for WebKit browsers */
 }
 
 
 #confettiButton:hover,
 #confettiButton:focus {
     transform: scale(1.1);
-    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
 #confettiButton:active {
@@ -598,11 +837,16 @@ body.loaded .landing-overlay {
 #confettiButton i {
     font-size: 27px;
     color: #333;
-    line-height: 1; /* Ensure icon doesn't add extra space */
-    display: block; /* Prevent inline behavior */
-    position: relative; /* Add this */
-    left: 4px; /* Adjust this value to move the icon right */
-    top: 1px; /* Adjust this value to move the icon down if needed */
+    line-height: 1;
+    /* Ensure icon doesn't add extra space */
+    display: block;
+    /* Prevent inline behavior */
+    position: relative;
+    /* Add this */
+    left: 4px;
+    /* Adjust this value to move the icon right */
+    top: 1px;
+    /* Adjust this value to move the icon down if needed */
 }
 
 /* Prevent any default browser styles */
@@ -623,23 +867,17 @@ body.loaded .landing-overlay {
     #details .col-md-4 {
         margin-bottom: 2rem;
     }
+
     #details .col-md-4:last-child {
         margin-bottom: 0;
     }
+
     .address-container {
         margin-bottom: 1rem;
     }
 
     .rings {
-     display: none;
+        display: none;
     }
-    
-}
 
-@media (min-width: 768px) {
-    .rings-image-container {
-        margin-top: auto; /* Push the image to the bottom on larger screens */
-        
-    }
-    
 }

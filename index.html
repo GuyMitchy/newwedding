@@ -25,10 +25,10 @@
                 <div id="landing-overlay" class="landing-overlay p-4 pt-5">
                     <div class="landing-content">
 
-                        <img src="assets/images/rings.png" alt="Wedding Rings" class="landing-rings mb-0 mr-4 mt-4">
+                        <img src="assets/images/rings.png" alt="Wedding Rings" class="landing-rings mb-0 mr-2 mt-4">
                         <p class="landing-names mt-4 pb-3">Guy and Bex</p>
 
-                        <p class="landing-date">27.02.25</p>
+                        <p class="landing-date ml-2">27.02.25</p>
                     </div>
                 </div>
             </div>
@@ -77,20 +77,26 @@
         <section id="home" class="main-section section-bg">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-12 d-flextext-shadow">
-                        <p class="invitation-text">PLEASE JOIN US FOR</p>
-                        <h1 class="wedding-of">the wedding of</h1>
-                        <h2 class="couple-names guy">GUY</h2>
-                        <span class="and text-left">and<span class="couple-names bex">REBECCA</span></span>
+                    <div class="col-12">
+                        <div class="text-container">
+                            <p class="invitation-text">PLEASE JOIN US FOR</p>
+                            <h1 class="wedding-of">the wedding of</h1>
+                            <div class="couple-names-container text-center">
+                                <h2 class="couple-names guy">GUY</h2>
+                                <span class="and text-left">and<span class="couple-names bex">REBECCA</span></span>
+                            </div>
 
-                        <p class="date">Thursday 27th Feb 2025</p>
-                        <p class="date deer-park">Deer Park Country House</p>
-                        <p class="ceremony-time">1.30PM Ceremony</p>
-                        <p class="reception mb-2">with reception to follow</p>
+                            <p class="date">Thursday 27th Feb 2025</p>
+                            <p class="date deer-park">Deer Park Country House</p>
+                            <p class="ceremony-time">1.30PM Ceremony</p>
+                            <p class="reception mb-3">with reception to follow</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
+        <!-- PARTITION 1 -->
 
         <section class="section-bg">
             <div class="container-fluid">
@@ -113,12 +119,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-12">
-                        <h2 class="section-title text-center mt-5 mb-5">Details</h2>
+                        <h2 class="details-section-title text-center mt-5 mb-4">Details</h2>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-12 details-text">
-                        <h3 class="subsection-title mt-2">VENUE</h3>
+                    <div class="col-12 details-text px-0">
+                        <h3 class="subsection-title mt-3 mb-4">VENUE</h3>
                         <p>Deer Park Country House is a beautiful, Georgian manor in Honiton. We have exclusive hire
                             of
                             the estate for the duration of Thursday 27th February 2025.</p>
@@ -127,7 +133,7 @@
                         <p>The bar is card only.</p>
                     </div>
 
-                    <div class="col-12 details-text">
+                    <div class="col-12 details-text px-0">
                         <div
                             class="d-flex flex-column justify-content-center align-items-center rings-address-container">
 
@@ -140,8 +146,8 @@
                         </div>
                     </div>
 
-                    <div class="col-12 details-text">
-                        <h3 class="subsection-title">EXTRAS</h3>
+                    <div class="col-12 details-text mb-4 px-0">
+                        <h3 class="subsection-title mt-4 mb-4">EXTRAS</h3>
                         <p>Formal and smart casual attire is welcome.</p>
                         <p>Your company is all we hope for but if you wish to bring a gift, cash towards our
                             honeymoon
@@ -149,7 +155,8 @@
                         <br>
                         <p>RSVP by 30th November.</p>
                         <p>If you would like to speak to us about anything in relation to the wedding, please call
-                            <br><br> Guy - 07927152928 <br> or Bex - 07792116913</p>
+                            <br><br> Guy - 07927152928 <br> or Bex - 07792116913
+                        </p>
                     </div>
 
                 </div>
@@ -174,33 +181,83 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
-                        <h2 class="section-title text-center" id="accommodation-title">Accommodation</h2>
-                        <div class="row justify-content-center">
-                            <div class="col-12 col-md-10 col-lg-8">
-                                <h3 class="room-type mb-2">DOUBLE COTTAGE ROOM £150</h3>
-                                <h3 class="room-type mb-4">SINGLE COTTAGE ROOM £75</h3>
+                        <h2 class="accommodation-section-title text-center" id="accommodation-title">Accommodation
+                        </h2>
 
-                                <div class="accommodation-info mb-5 px-4">
-                                    <p>Within 50 yards of the house, there are plenty of cottage rooms available to
-                                        book
+                        <!-- Bootstrap Tabs -->
+                        <ul class="nav nav-tabs justify-content-center mt-4" id="accommodationTabs" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link active" id="deer-park-tab" data-toggle="tab" href="#deer-park"
+                                    role="tab" aria-controls="deer-park" aria-selected="true">Deer Park</a>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <a class="nav-link" id="local-area-tab" data-toggle="tab" href="#local-area" role="tab"
+                                    aria-controls="local-area" aria-selected="false">Local Area</a>
+                            </li>
+                        </ul>
+
+                        <!-- Tab Content -->
+                        <div class="tab-content justify-content-center" id="accommodationTabContent">
+                            <!-- Deer Park Tab -->
+                            <div class="tab-pane fade show active justify-content-center" id="deer-park" role="tabpanel"
+                                aria-labelledby="deer-park-tab">
+
+                                <h3 class="room-type mb-2 mt-2">DOUBLE COTTAGE ROOM £150</h3>
+                                <h3 class="room-type mb-4">SINGLE COTTAGE ROOM £75</h3>
+                                <div class="accommodation-info mb-5 px-4 mx-auto">
+                                    <p>Within <span class="highlight-text">50 yards</span> of the house, there are
+                                        plenty of <span class="highlight-text">cottage rooms</span> available to book
                                         for the night of the wedding.</p>
-                                    <p>The booking will include breakfast with us on Friday morning.</p>
-                                    <p>Check in will be after the wedding breakfast, before the evening celebrations
-                                        begin.</p>
-                                    <p>Please phone Deer Park to book a room.</p>
-                                    <p>Tel: 01404 41266</p>
+                                    <p>The booking will include <span class="highlight-text">breakfast</span> with us on
+                                        Friday morning.</p>
+                                    <p><span class="highlight-text">Check in</span> will be after the wedding breakfast,
+                                        before the evening celebrations begin.</p>
+                                    <p>Please phone Deer Park to <span class="highlight-text">book</span> a room.</p>
+                                    <p>Tel: <span class="highlight-text">01404 41266</span></p>
                                 </div>
 
+                            </div>
 
-                                <h3 class="local-area-title mb-4">The Local Area</h3>
-                                <ul class="local-area-list">
-                                    <li>The Pig at Combe</li>
-                                    <li>Premier Inn, Honiton</li>
-                                    <li>Sidmouth Hotels</li>
-                                    <li>Ferndale Cottage, Stockland</li>
-                                    <li>Little Rock, Offwell</li>
-                                    <li>Self-Cater Sidmouth</li>
-                                    <li>Sid Valley View</li>
+                            <!-- Local Area Tab -->
+                            <div class="tab-pane fade" id="local-area" role="tabpanel" aria-labelledby="local-area-tab">
+
+                                <ul class="local-area-list px-4">
+                                    <li class="mt-2">
+                                        <a href="https://www.thepigathome.com/the-pig-at-combe/" target="_blank"
+                                            class="accommodation-link text-reset">The Pig at Combe</a>
+                                        
+                                    </li>
+                                    <li class="mt-2">
+                                        <a href="https://www.premierinn.com/gb/en/hotels/england/devon/honiton/honiton.html"
+                                            target="_blank" class="accommodation-link text-reset">Premier Inn,
+                                            Honiton</a>
+                                        
+                                    </li>
+                                    <li class="mt-2">
+                                        <a href="https://www.sidmouthhotels.co.uk/" target="_blank"
+                                            class="accommodation-link text-reset">Sidmouth Hotels</a>
+                                        
+                                    </li>
+                                    <li class="mt-2">
+                                        <a href="https://www.ferndalecottage.co.uk/" target="_blank"
+                                            class="accommodation-link text-reset">Ferndale Cottage, Stockland</a>
+                                        
+                                    </li>
+                                    <li class="mt-2">
+                                        <a href="https://www.littlerockoffwell.co.uk/" target="_blank"
+                                            class=" text-reset accommodation-link">Little Rock, Offwell</a>
+                                        
+                                    </li>
+                                    <li class="mt-2">
+                                        <a href="https://www.selfcateringsidmouth.co.uk/" target="_blank"
+                                            class="accommodation-link text-reset">Self-Cater Sidmouth</a>
+                                        
+                                    </li>
+                                    <li class="mt-2 mb-5">
+                                        <a href="https://www.sidvalleyview.co.uk/" target="_blank"
+                                            class="accommodation-link text-reset">Sid Valley View</a>
+                                        
+                                    </li>
                                 </ul>
                             </div>
 
@@ -209,7 +266,6 @@
                 </div>
             </div>
         </section>
-
         <!-- PARTITION 3 -->
         <section class="section-bg">
             <div class="container-fluid">
