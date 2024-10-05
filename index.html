@@ -38,7 +38,7 @@
 
     <!-- Header with Navigation -->
     <header>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top" id="mainNavbar">
             <div class="container-fluid nav-container">
                 <a class="navbar-brand py-2 px-2" href="#home"><img src="assets/images/heart.png" alt="Guy & Bex"
                         class="logo"></a>
@@ -539,6 +539,41 @@
             window.addEventListener("scroll", changeNavActiveState);
         });
     </script>
+
+    <!-- CLOSE NAVBAR ON CLICK -->
+    <script>
+  
+document.addEventListener('DOMContentLoaded', function() {
+    var navbar = document.getElementById('mainNavbar');
+    var navbarToggler = navbar.querySelector('.navbar-toggler');
+    var navbarCollapse = navbar.querySelector('.navbar-collapse');
+
+    // Function to close the navbar
+    function closeNavbar() {
+        if (navbarCollapse.classList.contains('show')) {
+            navbarToggler.click();
+        }
+    }
+
+    // Close navbar when clicking outside
+    document.addEventListener('click', function(event) {
+        var isClickInside = navbar.contains(event.target);
+        if (!isClickInside && navbarCollapse.classList.contains('show')) {
+            closeNavbar();
+        }
+    });
+
+    // Close navbar when clicking on a nav-link (for mobile)
+    var navLinks = navbar.querySelectorAll('.nav-link');
+    navLinks.forEach(function(navLink) {
+        navLink.addEventListener('click', function() {
+            if (window.innerWidth < 992) { // Bootstrap's lg breakpoint
+                closeNavbar();
+            }
+        });
+    });
+});
+</script>
 
 
 
