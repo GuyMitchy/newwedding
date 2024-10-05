@@ -223,7 +223,7 @@
 
                                 <ul class="local-area-list px-4">
                                     <li class="mt-2">
-                                        <a href="https://www.thepigathome.com/the-pig-at-combe/" target="_blank"
+                                        <a href="https://www.thepighotel.com/at-combe/" target="_blank"
                                             class="accommodation-link text-reset">The Pig at Combe</a>
                                         
                                     </li>
@@ -234,27 +234,27 @@
                                         
                                     </li>
                                     <li class="mt-2">
-                                        <a href="https://www.sidmouthhotels.co.uk/" target="_blank"
+                                        <a href="https://www.hotels-sidmouth.co.uk/" target="_blank"
                                             class="accommodation-link text-reset">Sidmouth Hotels</a>
                                         
                                     </li>
                                     <li class="mt-2">
-                                        <a href="https://www.ferndalecottage.co.uk/" target="_blank"
+                                        <a href="https://www.airbnb.co.uk/rooms/1111339365647767963?source_impression_id=p3_1728124343_P3f6KWkIYlSflnyV/" target="_blank"
                                             class="accommodation-link text-reset">Ferndale Cottage, Stockland</a>
                                         
                                     </li>
                                     <li class="mt-2">
-                                        <a href="https://www.littlerockoffwell.co.uk/" target="_blank"
+                                        <a href="https://www.airbnb.com/h/little-rock-east-devon-uk" target="_blank"
                                             class=" text-reset accommodation-link">Little Rock, Offwell</a>
                                         
                                     </li>
                                     <li class="mt-2">
-                                        <a href="https://www.selfcateringsidmouth.co.uk/" target="_blank"
+                                        <a href="https://www.selfcatersidmouth.co.uk/" target="_blank"
                                             class="accommodation-link text-reset">Self-Cater Sidmouth</a>
                                         
                                     </li>
                                     <li class="mt-2 mb-5">
-                                        <a href="https://www.sidvalleyview.co.uk/" target="_blank"
+                                        <a href="https://www.airbnb.com/h/sidvalleyview" target="_blank"
                                             class="accommodation-link text-reset">Sid Valley View</a>
                                         
                                     </li>
@@ -494,25 +494,33 @@
         }
 
         document.addEventListener('DOMContentLoaded', function () {
-            const landingOverlay = document.getElementById('landing-overlay');
+    const landingOverlay = document.getElementById('landing-overlay');
+    let hasTriggeredAnimation = false;
 
-            function revealWebsite() {
-                document.body.classList.add('loaded');
-                startConfettiAnimation();
-            }
+    function revealWebsite() {
+        if (!hasTriggeredAnimation) {
+            document.body.classList.add('loaded');
+            startConfettiAnimation();
+            hasTriggeredAnimation = true;
+            
+            // Remove the event listeners after triggering
+            window.removeEventListener('wheel', revealWebsite);
+            window.removeEventListener('touchmove', revealWebsite);
+        }
+    }
 
-            // Trigger the animation on scroll or swipe
-            window.addEventListener('wheel', revealWebsite, { once: true });
-            window.addEventListener('touchmove', revealWebsite, { once: true });
+    // Trigger the animation on scroll or swipe
+    window.addEventListener('wheel', revealWebsite);
+    window.addEventListener('touchmove', revealWebsite);
 
-            // Also add a button for accessibility
-            const revealButton = document.createElement('button');
-            revealButton.innerHTML = '<i class="fa-solid fa-grip-lines"></i>';
-            revealButton.classList.add('reveal-button', 'reveal-button-position');
-            revealButton.style.zIndex = '1000'; // Ensure it's above other elements
-            revealButton.addEventListener('click', revealWebsite);
-            landingOverlay.appendChild(revealButton); // Append to landingOverlay instead of landing-content
-        });
+    // Also add a button for accessibility
+    const revealButton = document.createElement('button');
+    revealButton.innerHTML = '<i class="fa-solid fa-grip-lines"></i>';
+    revealButton.classList.add('reveal-button', 'reveal-button-position');
+    revealButton.style.zIndex = '1000'; // Ensure it's above other elements
+    revealButton.addEventListener('click', revealWebsite);
+    landingOverlay.appendChild(revealButton);
+});
     </script>
 
 

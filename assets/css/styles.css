@@ -100,6 +100,8 @@ body.loaded .landing-overlay {
 
 /* NAVBAR */
 
+
+
 .bg-light {
     background-color: #ffe6e9 !important;
 }
@@ -117,14 +119,28 @@ body.loaded .landing-overlay {
 
 .nav-link {
     font-family: 'Bellefair', sans-serif !important;
+    color: rgba(0, 0, 0, 0.8) !important;
     font-size: 0.7rem;
     letter-spacing: 2px;
     font-weight: 300;
+    transition: all 0.3s ease; /* Smooth transition for all changes */
 }
 
 .nav-item {
     padding-left: 1rem;
     padding-right: 1rem;
+}
+
+/* Style for hover state */
+.navbar-nav .nav-link:hover {
+    color: rgba(0, 0, 0, 1) !important; /* Slightly darker on hover */
+}
+
+/* Style for active/selected nav item */
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-item.show .nav-link {
+    color: #000000 !important; /* Totally black for active/selected item */
+     /* Optional: makes the active item bolder */
 }
 
 .navbar-brand {
@@ -643,6 +659,7 @@ body.loaded .landing-overlay {
 
 #accommodationTabs .nav-link:hover {
     text-decoration: none;
+    opacity: 1;
     /* Remove underline on hover */
 
 }
@@ -680,6 +697,7 @@ body.loaded .landing-overlay {
 
 .accommodation-link {
     opacity: 0.7;
+    transition: all 0.3s ease;
 }
 
 .accommodation-link:hover {
