@@ -17,10 +17,11 @@
 
 body {
     padding-top: 56px;
-    
+
     overscroll-behavior-y: none;
 }
-    /* Adjust for fixed navbar */
+
+/* Adjust for fixed navbar */
 
 
 /* LANDING OVERLAY */
@@ -42,7 +43,7 @@ body {
 
 .gnb {
     max-width: 200px;
-}   
+}
 
 body.loaded .landing-overlay {
     transform: translateY(-100%);
@@ -96,7 +97,7 @@ body.loaded .landing-overlay {
 }
 
 .landing-date {
-   height: 60px;
+    height: 60px;
 }
 
 body.loaded .landing-overlay {
@@ -122,6 +123,7 @@ body.loaded .landing-overlay {
 
 .navbar-nav .nav-link {
     padding-left: 11px;
+    
 
 }
 
@@ -131,22 +133,26 @@ body.loaded .landing-overlay {
     font-size: 0.7rem;
     letter-spacing: 2px;
     font-weight: 300;
-    transition: all 0.3s ease; /* Smooth transition for all changes */
+    transition: all 0.3s ease;
     
+    /* Smooth transition for all changes */
+
 }
 
 
 
 /* Style for hover state */
 .navbar-nav .nav-link:hover {
-    color: rgba(0, 0, 0, 1) !important; /* Slightly darker on hover */
+    color: rgba(0, 0, 0, 1) !important;
+    /* Slightly darker on hover */
 }
 
 /* Style for active/selected nav item */
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-item.show .nav-link {
-    color: #000000 !important; /* Totally black for active/selected item */
-     /* Optional: makes the active item bolder */
+    color: #000000 !important;
+    /* Totally black for active/selected item */
+    /* Optional: makes the active item bolder */
 }
 
 .navbar-brand {
@@ -487,17 +493,52 @@ body.loaded .landing-overlay {
     }
 }
 
-@media (min-width: 1400px) {
+@media (min-width: 2000px) {
 
-    #home {
-        height: 100vh;
+    
+
+    .couple-names {
+        font-size: 2.6rem;
+
+    }
+
+    .invitation-text {
+        font-size: 1.8rem;
+    }
+
+    .wedding-of {
+        font-size: 2.6rem;
     }
 
     .couple-names {
-        font-size: 2.4rem;
+        font-size: 2.6rem;
     }
 
+    .and {
+        font-size: 2.5rem;
+    }
+
+    .date,
+    .ceremony-time {
+        font-size: 1.8rem;
+    }
+
+    .deer-park {
+        font-size: 1.4rem;
+    }
+
+    .reception {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .guy {
+        right: 140px;
+    }
+
+   
 }
+
 
 
 
@@ -513,7 +554,7 @@ body.loaded .landing-overlay {
     background-repeat: no-repeat;
     background-position: center;
     padding: 2rem;
-   
+
 
 
 }
@@ -583,7 +624,7 @@ body.loaded .landing-overlay {
     font-size: 1.8rem;
     color: #ffffff;
     text-align: center;
-    
+
 
 }
 
@@ -916,4 +957,4 @@ body.loaded .landing-overlay {
 /* PARALAX JITTER FIX */
 .full-height {
     height: calc(var(--vh, 1vh) * 100);
-  }
+}
