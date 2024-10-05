@@ -37,6 +37,10 @@ body {
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 
+.gnb {
+    max-width: 200px;
+}   
+
 body.loaded .landing-overlay {
     transform: translateY(-100%);
 }
