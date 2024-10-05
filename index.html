@@ -426,10 +426,12 @@
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
+            // Utility function
             function randomInRange(min, max) {
                 return Math.random() * (max - min) + min;
             }
-
+        
+            // Confetti Cannon
             function triggerConfetti() {
                 confetti({
                     angle: randomInRange(55, 125),
@@ -440,100 +442,107 @@
                     scalar: randomInRange(0.4, 0.6) // This makes the confetti smaller
                 });
             }
-
-            // Add event listener to the confetti button
-            const confettiButton = document.getElementById('confettiButton');
-            if (confettiButton) {
-                confettiButton.addEventListener('click', triggerConfetti);
+        
+            // Falling Confetti
+            function startConfettiAnimation() {
+                const colors = ['#FFC0CB', '#FFB6C1', '#ffffff']; // Various shades of pink
+        
+                // Left side burst
+                confetti({
+                    particleCount: 250,
+                    spread: 100,
+                    origin: { x: 0, y: 0.4 },
+                    colors: colors,
+                    shapes: ['circle'],
+                    scalar: randomInRange(0.4, 0.5),
+                });
+        
+                // Right side burst
+                confetti({
+                    particleCount: 250,
+                    spread: 100,
+                    origin: { x: 1, y: 0.4 },
+                    colors: colors,
+                    shapes: ['circle'],
+                    scalar: randomInRange(0.4, 0.5),
+                });
+        
+                // Center burst
+                confetti({
+                    particleCount: 250,
+                    spread: 160,
+                    origin: { x: 0.5, y: 0.6 },
+                    colors: colors,
+                    shapes: ['circle'],
+                    scalar: randomInRange(0.4, 0.6),
+                });
             }
-        });
-    </script>
-
-    <!-- FALLING CONFETTI -->
-    <script>
-        function startConfettiAnimation() {
-            const duration = 15 * 1000;
-            const animationEnd = Date.now() + duration;
-            const colors = ['#FFC0CB', '#FFB6C1', '#ffffff']; // Various shades of pink
-
-            // Left side burst
-            confetti({
-                particleCount: 250,
-                spread: 100,
-                origin: { x: 0, y: 0.4 },
-                colors: colors,
-                shapes: ['circle'],
-                scalar: randomInRange(0.4, 0.5),
-            });
-
-            // Right side burst
-            confetti({
-                particleCount: 250,
-                spread: 100,
-                origin: { x: 1, y: 0.4 },
-                colors: colors,
-                shapes: ['circle'],
-                scalar: randomInRange(0.4, 0.5),
-            });
-
-            // Center burst
-            confetti({
-                particleCount: 250,
-                spread: 160,
-                origin: { x: 0.5, y: 0.6 },
-                colors: colors,
-                shapes: ['circle'],
-                scalar: randomInRange(0.4, 0.6),
-            });
-        }
-
-
-
-        function randomInRange(min, max) {
-            return Math.random() * (max - min) + min;
-        }
-
-        document.addEventListener('DOMContentLoaded', function () {
-    const landingOverlay = document.getElementById('landing-overlay');
-    let hasTriggeredAnimation = false;
-
-    function revealWebsite() {
-        if (!hasTriggeredAnimation) {
-            document.body.classList.add('loaded');
-            startConfettiAnimation();
-            hasTriggeredAnimation = true;
-            
-            // Remove the event listeners after triggering
-            window.removeEventListener('wheel', revealWebsite);
-            window.removeEventListener('touchmove', revealWebsite);
-        }
-    }
-
-    // Trigger the animation on scroll or swipe
-    window.addEventListener('wheel', revealWebsite);
-    window.addEventListener('touchmove', revealWebsite);
-
-    // Also add a button for accessibility
-    const revealButton = document.createElement('button');
-    revealButton.innerHTML = '<i class="fa-solid fa-grip-lines"></i>';
-    revealButton.classList.add('reveal-button', 'reveal-button-position');
-    revealButton.style.zIndex = '1000'; // Ensure it's above other elements
-    revealButton.addEventListener('click', revealWebsite);
-    landingOverlay.appendChild(revealButton);
-});
-    </script>
-
-
-
-    <!-- NAVIGATION SCRIPT -->
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
+        
+            // Landing Page Reveal
+            const landingOverlay = document.getElementById('landing-overlay');
+            const logo = document.querySelector('.navbar-brand');
+            let isLandingPageOpen = true;
+            let startY;
+        
+            function revealWebsite() {
+                if (isLandingPageOpen) {
+                    document.body.classList.add('loaded');
+                    startConfettiAnimation();
+                    isLandingPageOpen = false;
+        
+                    // Remove the event listeners after triggering
+                    window.removeEventListener('wheel', revealWebsite);
+                    document.removeEventListener('touchstart', handleTouchStart);
+                    document.removeEventListener('touchmove', handleTouchMove);
+                }
+            }
+        
+            function hideLandingPage() {
+                if (!isLandingPageOpen) {
+                    document.body.classList.remove('loaded');
+                    isLandingPageOpen = true;
+        
+                    // Re-add event listeners
+                    window.addEventListener('wheel', revealWebsite);
+                    document.addEventListener('touchstart', handleTouchStart);
+                    document.addEventListener('touchmove', handleTouchMove);
+                }
+            }
+        
+            function handleTouchStart(e) {
+                startY = e.touches[0].clientY;
+            }
+        
+            function handleTouchMove(e) {
+                if (!startY) return;
+                const yDiff = startY - e.touches[0].clientY;
+                if (Math.abs(yDiff) > 10) revealWebsite();
+                startY = null;
+            }
+        
+            // Trigger the animation on scroll or swipe
+            window.addEventListener('wheel', revealWebsite);
+            document.addEventListener('touchstart', handleTouchStart);
+            document.addEventListener('touchmove', handleTouchMove);
+        
+            // Add a button for accessibility
+            const revealButton = document.createElement('button');
+            revealButton.innerHTML = '<i class="fa-solid fa-grip-lines"></i>';
+            revealButton.classList.add('reveal-button', 'reveal-button-position');
+            revealButton.style.zIndex = '1000';
+            revealButton.addEventListener('click', revealWebsite);
+            landingOverlay.appendChild(revealButton);
+        
+            // Add click event listener to the logo
+            logo.addEventListener('click', hideLandingPage);
+        
+            // Navigation Active State
             const sections = document.querySelectorAll("section.main-section");
             const navLinks = document.querySelectorAll(".navbar-nav .nav-link:not([data-toggle='modal'])");
-
+        
             function changeNavActiveState() {
                 let scrollPosition = window.scrollY + 150; // Increased offset
-
+        
                 sections.forEach((section, index) => {
                     if (section.offsetTop <= scrollPosition &&
                         section.offsetTop + section.offsetHeight > scrollPosition) {
@@ -542,38 +551,35 @@
                     }
                 });
             }
-
+        
             changeNavActiveState();
             window.addEventListener("scroll", changeNavActiveState);
+        
+            // Close Navbar on Click Outside
+            var navbar = document.getElementById('mainNavbar');
+            var navbarToggler = navbar.querySelector('.navbar-toggler');
+            var navbarCollapse = navbar.querySelector('.navbar-collapse');
+        
+            function closeNavbar() {
+                if (navbarCollapse.classList.contains('show')) {
+                    navbarToggler.click();
+                }
+            }
+        
+            document.addEventListener('click', function(event) {
+                var isClickInside = navbar.contains(event.target);
+                if (!isClickInside && navbarCollapse.classList.contains('show')) {
+                    closeNavbar();
+                }
+            });
+        
+            // Confetti Button
+            const confettiButton = document.getElementById('confettiButton');
+            if (confettiButton) {
+                confettiButton.addEventListener('click', triggerConfetti);
+            }
         });
-    </script>
-
-    <!-- CLOSE NAVBAR ON CLICK -->
-    <script>
-  
-document.addEventListener('DOMContentLoaded', function() {
-    var navbar = document.getElementById('mainNavbar');
-    var navbarToggler = navbar.querySelector('.navbar-toggler');
-    var navbarCollapse = navbar.querySelector('.navbar-collapse');
-
-    // Function to close the navbar
-    function closeNavbar() {
-        if (navbarCollapse.classList.contains('show')) {
-            navbarToggler.click();
-        }
-    }
-
-    // Close navbar when clicking outside
-    document.addEventListener('click', function(event) {
-        var isClickInside = navbar.contains(event.target);
-        if (!isClickInside && navbarCollapse.classList.contains('show')) {
-            closeNavbar();
-        }
-    });
-
-    
-});
-</script>
+        </script>
 
 
 

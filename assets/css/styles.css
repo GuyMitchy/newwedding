@@ -34,6 +34,7 @@ body {
     justify-content: center;
     align-items: center;
     transition: transform 1s cubic-bezier(0.7, 0, 0.3, 1);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
 }
 
 body.loaded .landing-overlay {
@@ -500,7 +501,7 @@ body.loaded .landing-overlay {
 
 /* DETAILS SECTION */
 #details {
-    background-image: url('../images/background2.png');
+    background-image: url('../images/big-w-flower-bg.png');
     background-attachment: fixed;
 
     background-size: cover;
@@ -564,7 +565,7 @@ body.loaded .landing-overlay {
 
 /* ACCOMMODATION SECTION */
 #accommodation {
-    background-image: url('../images/background1.png');
+    background-image: url('../images/big-g-flower-bg.png');
     background-attachment: fixed;
     background-repeat: no-repeat;
     height: auto;
@@ -721,7 +722,7 @@ body.loaded .landing-overlay {
 
 /* MENU SECTION */
 #menu {
-    background-image: url('../images/background2.png');
+    background-image: url('../images/big-w-flower-bg.png');
     background-attachment: fixed;
     height: auto;
     background-size: cover;
