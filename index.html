@@ -571,17 +571,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Close navbar when clicking on a nav-link (for mobile)
-    var navLinks = navbar.querySelectorAll('.nav-link');
-    navLinks.forEach(function(navLink) {
-        navLink.addEventListener('click', function() {
-            if (window.innerWidth < 992) { // Bootstrap's lg breakpoint
-                closeNavbar();
-            }
-        });
-    });
+    
 });
 </script>
+
 
 
 
