@@ -131,10 +131,7 @@ body.loaded .landing-overlay {
     transition: all 0.3s ease; /* Smooth transition for all changes */
 }
 
-.nav-item {
-    padding-left: 1rem;
-    padding-right: 1rem;
-}
+
 
 /* Style for hover state */
 .navbar-nav .nav-link:hover {
@@ -892,6 +889,11 @@ body.loaded .landing-overlay {
     #details .col-md-4 {
         margin-bottom: 2rem;
     }
+
+    .accommodation-section-title {
+        font-size: 1.4rem;
+    }
+
 
     #details .col-md-4:last-child {
         margin-bottom: 0;
