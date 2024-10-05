@@ -97,8 +97,8 @@ body.loaded .landing-overlay {
 
 .landing-date {
     font-family: 'Bellefair', sans-serif;
-    font-size: 1rem;
-    padding-top: 4rem;
+    font-size: 0.8rem;
+    padding-top: 2rem;
     letter-spacing: 6px;
     color: #000000;
 }
