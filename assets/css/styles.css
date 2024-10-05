@@ -20,6 +20,80 @@ body {
     /* Adjust for fixed navbar */
 }
 
+/* LANDING OVERLAY */
+.landing-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffe6e9; /* Light pink */
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1s cubic-bezier(0.7, 0, 0.3, 1);
+}
+
+body.loaded .landing-overlay {
+    transform: translateY(-100%);
+}
+
+.reveal-button-position {
+    position: absolute;
+    bottom: 50px; /* Adjust this value to move the button up or down */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.reveal-button {
+    background: none;
+    border: none;
+    color: #000000; /* Adjust color as needed */
+    font-size: 2rem; /* Adjust size as needed */
+    
+    padding: 10px;
+    transition: opacity 0.3s ease;
+}
+
+
+.reveal-button:hover {
+    opacity: 0.7;
+}
+
+.landing-content {
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.landing-rings {
+    max-width: 200px;
+    margin-bottom: 20px;
+   
+}
+
+.landing-names {
+    font-family: 'Le Jour Script', sans-serif;
+    font-size: 1.6rem;
+    letter-spacing: 6px;
+    color: #1a1a1a;
+}   
+
+.landing-date {
+    font-family: 'Bellefair', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 6px;
+    color: #1a1a1a;
+}
+
+body.loaded .landing-overlay {
+    transform: translateY(-100%);
+}
+
 /* NAVBAR */
 
 .bg-light {
@@ -28,7 +102,7 @@ body {
 
 .logo {
 
-    height: 45px;
+    height: 40px;
     padding-top: 5px;
     padding-bottom: 5px;
 
@@ -125,6 +199,7 @@ body {
     box-shadow: 
         0 -2px 4px -1px rgba(0, 0, 0, 0.1),
         0 2px 4px -1px rgba(0, 0, 0, 0.1);
+    
 
 }
 
@@ -176,6 +251,7 @@ body {
     margin-bottom: 1rem;
     text-transform: uppercase;
     letter-spacing: 6px;
+    
 }
 
 /* GUY */
@@ -282,7 +358,7 @@ body {
     margin-bottom: 1;
 }
 
-.col-md-4>p {
+.details-text>p {
         font-family: 'Bellefair', serif;
         font-size: 1rem;
         letter-spacing: 1.2px;
@@ -299,7 +375,7 @@ body {
         letter-spacing: 1.2px;
         
         text-align: center;
-        padding: 0 1rem 1rem 1rem;
+        
         color: #000000c6;   
 
 }
@@ -325,6 +401,7 @@ body {
    
     text-align: center;
     margin-top: 1rem;
+    
 }
 
 #accommodation-title {
@@ -378,14 +455,16 @@ body {
     display: block;
   
 }   
+.bunny-container {
+    position: absolute;
+    bottom: 0; /* Adjust this value to move it up or down */
+    right: 250px; /* Adjust this value to move it left or right */
+    z-index: 1000; /* Ensure it's above other content */
+}
 
-
-
-
-
-
-
-
+.bunny-container img {
+   height: 300px;
+}
 
 /* MENU SECTION */
 #menu {
@@ -461,10 +540,15 @@ body {
     margin-top: 10px;
     margin-bottom: 0px;
 
-
-
-
 }
+
+/* FORM */
+
+.form-format {
+    height: 700px;
+    width: 100%;
+}
+
 
 
 
@@ -545,10 +629,17 @@ body {
     .address-container {
         margin-bottom: 1rem;
     }
+
+    .rings {
+     display: none;
+    }
+    
 }
 
 @media (min-width: 768px) {
     .rings-image-container {
         margin-top: auto; /* Push the image to the bottom on larger screens */
+        
     }
+    
 }
